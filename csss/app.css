@@ -1,5 +1,5 @@
 @media screen and (min-width: 1024px) {
-    body {
+    .fondo {
         background-image: url('../img/fondopc.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -8,4 +8,8 @@
 .Inicio{
     color: white;
     text-align: center;
+}
+h1{
+    font-size: 30px;
+    color: white;
 }
