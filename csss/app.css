@@ -1,6 +1,17 @@
+
 @media screen and (min-width: 1024px) {
     .fondo {
         background-image: url('../img/fondopc.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .fondoestrellas {
+        background-image: url('../img/fondoestrellas.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .fondops2 {
+        background-image: url('../img/fondops2.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -35,11 +46,10 @@ h3 {
 }
 
 .card {
-    width: 350px;
-    height: 140px;
+    width: 600px;
+    height: 200px;
 
     background: rgba(255, 255, 255, 0.08);
-
     border-radius: 20px;
 
     display: flex;
@@ -47,7 +57,7 @@ h3 {
     align-items: center;
 
     padding: 15px;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
 .card-text h3 {
@@ -59,6 +69,95 @@ h3 {
     color: #cfcfcf;
 }
 
-.astronauta {
-    width: 120px;
+.astronautaa {
+    width: 350px;
+    height: 300px;
 }
+.viajar-contenedor{
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    gap: 70px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    margin: auto;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.viajar{
+    width: 200px;
+    height: 200px;
+    transition: 0.3s;
+    border-radius: 10%;
+    
+}
+
+.viajar:hover{
+    transform: scale(1.05);
+}
+
+.cardwhere {
+    width: 300px;
+    height: 50px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    margin: 20px auto;
+}
+/* Contenedor principal */
+.desplegable-contenedor {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* El botón que activa el menú */
+  .boton-desplegable {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* El contenido del menú (oculto por defecto) */
+  .contenido-desplegable {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; /* Asegura que el menú quede por encima de otros elementos */
+    border-radius: 4px;
+  }
+  
+  /* Enlaces dentro del menú desplegable */
+  .contenido-desplegable a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Cambiar el color de fondo al pasar el ratón */
+  .contenido-desplegable a:hover { 
+    background-color: #f1f1f1; 
+  }
+  
+  /* Mostrar el menú desplegable al pasar el ratón por el contenedor */
+  .desplegable-contenedor:hover .contenido-desplegable {
+    display: block;
+  }
+  h4 {
+   font-size: 30px;
+   color: rgb(255, 255, 255);
+  }
+  .
