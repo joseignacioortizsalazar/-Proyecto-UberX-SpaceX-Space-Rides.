@@ -16,6 +16,7 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
 }
 
 .Inicio {
@@ -25,10 +26,12 @@
 
 .planeta-item {
     display: flex;
-    align-items: center; /* Alinea los elementos verticalmente al centro */
-    gap: 25px;           
-    list-style: none;    
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    gap: 25px;
+    list-style: none;
 }
+
 h1 {
     color: rgb(252, 246, 246);
     text-align: start;
@@ -68,9 +71,10 @@ p {
     border-radius: 50%;
     object-fit: cover;
 }
-.nombreavatar{
+
+.nombreavatar {
     font-size: 40px;
-    color:white
+    color: white
 }
 
 .card {
@@ -342,7 +346,8 @@ input {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
 }
 
 hr {
@@ -352,7 +357,7 @@ hr {
     width: 85%;
     margin-top: 40px;
     margin-bottom: 30px;
-    margin-left: 200px;       
+    margin-left: 200px;
 }
 
 input[type="date"] {
@@ -361,15 +366,16 @@ input[type="date"] {
     border-radius: 5px;
     font-family: Arial, sans-serif;
     color: #333;
-  }
+}
 
-.regresar{
+.regresar {
     width: 50px;
     height: 50px;
     padding: 20px;
-    
+
 }
-.atras{
+
+.atras {
     font-size: 50px;
     background: rgba(95, 93, 93, 0.5);
     width: 60px;
@@ -377,107 +383,214 @@ input[type="date"] {
     text-align: center;
     position: fixed;
     top: 0%;
-    color: white
+    color: white;
+    margin: 20px
 }
-.planetas{
+
+.planetas {
     display: flex;
     justify-content: center;
-    gap:15px;
-    padding-top:20px;
+    gap: 15px;
+    padding-top: 20px;
 }
 
-.planetas button{
-    padding:10px 20px;
-    border:none;
-    border-radius:20px;
+.planetas button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
 }
 
-.planeta-activo{
-    background:#7c5cff;
-    color:white;
+.planeta-activo {
+    background: #7c5cff;
+    color: white;
 }
 
-.mapa{
-    position:relative;
-    margin-top:40px;
-}
-
-.ruta{
-    width:100%;
-    height:350px;
-}
-
-.tierra{
-    width:70px;
-    position:absolute;
-    right:10px;
-    top:10px;
-}
-.marte{
-    width:70px;
-    position:absolute;
-    right:10px;
-    top:10px;
-}
-
-#sheet-toggle{
-    display:none;
-}
-
-.travel-card{
-    background:rgba(28, 235, 155, 0.08);
-    backdrop-filter:blur(10px);
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
-    position: fixed;
-    width: auto;
-    height: auto;
-    bottom: 0;
-    border:solid rgb(104, 27, 148);
-    left: 37%
-}
-
-.abrir-sheet{
-    display:block;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.nave-principal{
-    text-align: center;
-}
-
-.nave{
-    width: 130px;
-}
-
-.lista-naves{
-    max-height: 0;
-    overflow: hidden;
-    transition: 4s;
-}
-
-#sheet-toggle:checked ~ .travel-card  .lista-naves{
-    max-height: 300px;
-}
-
-.contenedor-fecha{
-    text-align: center;
-
-}
-
-.nave-item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    padding: 10px;
-    border:1px solid #7c5cff;
-    border-radius:15px;
+.mapa {
+    position: relative;
+    margin-top: 40px;
 }
 
 .viajerr {
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*tierra y marte*/
+
+/*menu de viajes */
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 500px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: solid rgb(104, 27, 148);
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btmenu {
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px 20px 0 0;
+}
+
+
+.menu1,
+.menu2 {
+    display: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: solid rgb(104, 27, 148);
+    border-radius: 20px 20px 0 0;
+}
+
+#lista:checked~.menu .contentmenu .menu1 {
+    display: block;
+}
+
+#detalle:checked~.menu .contentmenu .menu2 {
+    display: block;
+}
+
+#abrirMenu:checked~.menu .contentmenu {
+    height: auto;
+}
+
+.contentmenu {
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.pagar {
+    font-size: 30px;
+}
+
+.pagar:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.wallet {
+    font-size: 30px;
+}
+
+.wallet:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 30px;
+
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.payment-panel {
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1d2433;
+    border-radius: 10px;
+}
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.payment-header h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+.payment-search {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 20px 0;
+}
+
+.payment-search input {
+    border: none;
+    background: none;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.payment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    color: white;
+    border: none;
+    background: none;
+}
+
+.payment-card-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.payment-logo {
+    width: 25px;
+    height: 18px;
+    background: white;
+}
+
+.payment-default {
+    background: gold;
+    color: black;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.payment-delete {
+    color: red;
+}
+
+.payment-add-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
 }
