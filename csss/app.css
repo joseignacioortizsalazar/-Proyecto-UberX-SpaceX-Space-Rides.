@@ -902,17 +902,12 @@ input[type="date"] {
     content: "<-";
 }
 
-.fa-share-nodes::before {
-    content: "🔗";
-}
 
 .fa-download::before {
-    content: "📥";
+    content: "";
 }
 
-.fa-tag::before {
-    content: "☰";
-}
+
 /*recibo+*/
 
 /* responsive */
